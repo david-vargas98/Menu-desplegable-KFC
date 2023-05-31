@@ -1,0 +1,457 @@
+//Se importa y se utiliza en hojas de estilo CSS para importar una fuente de Google Fonts llamada "Ubuntu" en diferentes pesos (300, 400, 500 y 700).
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+//La regla "*{}" se utiliza como selector universal y se aplica a todos los elementos dentro de un documento HTML. Básicamente, significa que se aplicará a cada elemento en la página, sin importar su etiqueta, clase, id u otros selectores específicos.
+* {
+  //Establece el margen de todos los elementos en 0. El margen es el espacio alrededor del contenido de un elemento.
+  margin: 0;
+  //Establece el relleno de todos los elementos en 0. El relleno es el espacio dentro del borde de un elemento.
+  padding: 0;
+  //Define el modelo de caja a "border-box" para todos los elementos. El modelo de caja determina cómo se calcula el ancho y alto de un elemento, y "border-box" indica que el ancho y alto incluyen el contenido, el relleno y el borde, en lugar de agregarlos por separado.
+  box-sizing: border-box;
+  //Establece la fuente de todos los elementos en "Ubuntu" y, si no está disponible, utiliza la fuente sans-serif predeterminada del navegador.
+  font-family: "Ubuntu", sans-serif;
+}
+//Se establece estilos específicos para el elemento con la clase ".main", i.e., section.
+.main {
+  //Establece la posición del elemento como "relative". Esto significa que se posicionará en relación con su ubicación normal en el flujo del documento.
+  position: relative;
+  //Establece la altura mínima del elemento en un 100% del viewport (ventana gráfica del navegador). Esto asegura que el elemento ocupe al menos toda la altura visible en la pantalla.
+  min-height: 100vh;
+  // Establece un fondo degradado radial en el elemento. El degradado va desde el color #f0483a hasta el color #d10a20.
+  background: radial-gradient(#f0483a, #d10a20);
+  //Establece el elemento como un contenedor flexible. Esto permite utilizar las propiedades de flexbox para controlar la disposición y el alineamiento de los elementos hijos dentro del contenedor.
+  display: flex;
+  //Centra horizontalmente los elementos hijos dentro del contenedor flex. Los elementos se distribuirán equitativamente con espacio adicional en los extremos.
+  justify-content: center;
+  //Centra verticalmente los elementos hijos dentro del contenedor flex. Los elementos se alinearán verticalmente en el centro del contenedor.
+  align-items: center;
+  //Establece la dirección principal de los elementos hijos dentro del contenedor como columna. Los elementos se apilarán verticalmente en lugar de en una fila.
+  flex-direction: column;
+  //Establece un relleno de 30 píxeles en la parte superior y inferior, y un relleno de 100 píxeles en los lados izquierdo y derecho del elemento.
+  padding: 30px 100px;
+}
+//Se establece estilos específicos para el elemento <header>.
+header {
+  //Establece la posición del elemento como "absolute". Esto permite posicionar el elemento de forma precisa en relación con su primer ancestro posicionado.
+  position: absolute;
+  //Establece la distancia desde la parte superior del elemento hasta el borde superior del contenedor padre como 0. Esto coloca el elemento en la parte superior del contenedor.
+  top: 0;
+  //Establece la distancia desde el lado izquierdo del elemento hasta el borde izquierdo del contenedor padre como 0. Esto coloca el elemento en el lado izquierdo del contenedor.
+  left: 0;
+  //Establece el ancho del elemento como 100% del ancho del contenedor padre. Esto hace que el elemento ocupe todo el ancho disponible.
+  width: 100%;
+  // Establece un relleno de 30 píxeles en la parte superior e inferior, y un relleno de 100 píxeles en los lados izquierdo y derecho del elemento.
+  padding: 30px 100px;
+  //Establece el elemento como un contenedor flexible. Esto permite utilizar las propiedades de flexbox para controlar la disposición y el alineamiento de los elementos hijos dentro del contenedor.
+  display: flex;
+  //Distribuye los elementos hijos dentro del contenedor con espacio adicional entre ellos. Esto hace que los elementos se coloquen lo más lejos posible entre sí, empujando los elementos extremos hacia los lados opuestos.
+  justify-content: space-between;
+  //Centra verticalmente los elementos hijos dentro del contenedor. Los elementos se alinearán verticalmente en el centro del contenedor.
+  align-items: center;
+  //Establece la propiedad de índice de apilamiento (z-index) del elemento en 1000. Esto define su posición en la pila de elementos y puede controlar qué elementos se superponen a otros cuando hay superposiciones en el diseño.
+  z-index: 1000;
+}
+//Establece un estilo específico para el elemento con la clase ".logo"
+.logo {
+  //Establece el ancho máximo del elemento a 90 píxeles. Esto significa que si el contenido del elemento es menor a 90 píxeles de ancho, mantendrá su tamaño original. Sin embargo, si el contenido es más ancho que 90 píxeles, se reducirá su tamaño para ajustarse dentro de ese límite.
+  max-width: 90px;
+}
+//Establece estilos específicos para un elemento con la clase ".navigation".
+.navigation {
+  // Establece el elemento con la clase ".navigation" como un contenedor flexible. Esto permite utilizar las propiedades de flexbox para controlar la disposición y el alineamiento de los elementos hijos dentro del contenedor.
+  display: flex;
+  //Esto indica que los elementos <li> dentro del elemento con la clase ".navigation" tendrán estilos específicos. Esta sintaxis se utiliza para anidar reglas CSS y aplicar estilos a elementos hijos directos de otro elemento.
+  li {
+    //Elimina los estilos de viñetas de los elementos de lista. Esto oculta los puntos o números que suelen aparecer por defecto en los elementos de lista.
+    list-style: none;
+
+    //Esto indica que los elementos <a> dentro de los elementos <li> en el elemento con la clase ".navigation" tendrán estilos específicos.
+    a {
+      // Establece la posición de los elementos <a> como "relative". Esto permite posicionar los elementos de forma relativa en relación con su posición normal en el flujo del documento.
+      position: relative;
+      //Establece el color de texto de los elementos <a> como blanco (#fff).
+      color: #fff;
+      //Elimina la decoración de subrayado de los enlaces. Esto evita que los enlaces se muestren con una línea de subrayado por defecto.
+      text-decoration: none;
+      // Establece un margen izquierdo de 40 píxeles en los elementos <a>. Esto crea un espacio horizontal entre los enlaces dentro de los elementos de lista.
+      margin-left: 40px;
+    }
+  }
+}
+//Se establece estilos específicos para el elemento con la clase ".content".
+.content {
+  //Establece la posición del elemento como "relative". Esto significa que se posicionará en relación con su ubicación normal en el flujo del documento.
+  position: relative;
+  // Establece el ancho del elemento como el 100% del ancho del contenedor padre. Esto hace que el elemento ocupe todo el ancho disponible.
+  width: 100%;
+  //Establece el elemento como un contenedor flexible. Esto permite utilizar las propiedades de flexbox para controlar la disposición y el alineamiento de los elementos hijos dentro del contenedor.
+  display: flex;
+  //Distribuye los elementos hijos dentro del contenedor con espacio adicional entre ellos. Esto hace que los elementos se coloquen lo más lejos posible entre sí, empujando los elementos extremos hacia los lados opuestos.
+  justify-content: center;
+  //Centra verticalmente los elementos hijos dentro del contenedor. Los elementos se alinearán verticalmente en el centro del contenedor.
+  align-items: center;
+}
+//Se establece estilos específicos para el elemento con la clase ".text"
+.text {
+  //Establece el ancho del elemento ".text" como el 100% del ancho del contenedor padre. Esto asegura que ocupe todo el ancho disponible.
+  width: 100%;
+  // Establece el ancho máximo del elemento ".text" como 600 píxeles. Esto limita el ancho del elemento para que no se extienda más allá de ese límite.
+  max-width: 600px;
+  // Esto indica que los elementos <h2> dentro del elemento ".text" tendrán estilos específicos.
+  h2 {
+    //Establece el color de texto de los elementos <h2> como blanco (#fff).
+    color: #fff;
+    //Establece el tamaño de fuente de los elementos <h2> como 5 veces el tamaño de fuente por defecto.
+    font-size: 5em;
+    //Establece el grosor de la fuente de los elementos <h2> como 300, lo que indica una fuente de grosor ligero.
+    font-weight: 300;
+
+    // Esto indica que los elementos <span> dentro de los elementos <h2> tendrán estilos específicos.
+    span {
+      //stablece el grosor de la fuente de los elementos <span> como 700, lo que indica una fuente de grosor negrita.
+      font-weight: 700;
+    }
+  }
+  //Esto indica que los elementos <p> dentro del elemento ".text" tendrán estilos específicos.
+  p {
+    //Establece el color de texto de los elementos <p> como blanco (#fff).
+    color: #fff;
+    //Establece el grosor de la fuente de los elementos <p> como 400, lo que indica una fuente de grosor normal.
+    font-weight: 400;
+    //Establece el tamaño de fuente de los elementos <p> como 1.1 veces el tamaño de fuente por defecto.
+    font-size: 1.1em;
+    //Establece la altura de línea de los elementos <p> como 1.5 veces el tamaño de fuente.
+    line-height: 1.5em;
+    //Establece un margen superior e inferior de 20 píxeles en los elementos <p>. Esto crea un espacio vertical alrededor del párrafo.
+    margin: 20px 0;
+  }
+}
+//Se establece estilos específicos para el elemento con la clase ".btn".
+.btn {
+  //Establece la posición del elemento como "relative". Esto significa que se posicionará en relación con su ubicación normal en el flujo del documento.
+  position: relative;
+  //Establece el elemento como un bloque en línea. Esto hace que el elemento ocupe solo el ancho necesario para su contenido, pero permite que otros elementos se coloquen en línea junto a él.
+  display: inline-block;
+  //Establece un relleno de 20 píxeles en la parte superior e inferior y 50 píxeles en los lados izquierdo y derecho del elemento.
+  padding: 20px 50px;
+  //Establece el color de fondo del elemento como blanco (#fff).
+  background: #fff;
+  //Establece el color de texto del elemento como gris oscuro (#333).
+  color: #333;
+  //Establece el tamaño de fuente del elemento como 1.1 veces el tamaño de fuente por defecto.
+  font-size: 1.1em;
+  //Establece el grosor de la fuente del elemento como 500, lo que indica una fuente de grosor medio.
+  font-weight: 500;
+  //Establece un radio de borde de 40 píxeles en el elemento, lo que crea esquinas redondeadas.
+  border-radius: 40px;
+  // Elimina la decoración de subrayado del texto. Esto evita que el texto del botón se muestre subrayado por defecto.
+  text-decoration: none;
+  //Agrega una transición suave de 0.25 segundos a las propiedades que cambien. Esto crea un efecto de transición suave cuando el estado del botón cambie.
+  transition: 0.25s;
+  //Esto indica que cuando se coloca el cursor sobre el elemento ".btn", se aplicarán estilos adicionales.
+  &:hover {
+    //Aumenta el espaciado entre letras en 2 píxeles cuando se coloca el cursor sobre el botón. Esto puede crear un efecto de expansión o separación entre las letras.
+    letter-spacing: 2px;
+  }
+}
+//Se establece estilos específicos para un elemento con la clase ".slider
+.slider {
+  //Establece la posición del elemento como "relative". Esto significa que se posicionará en relación con su ubicación normal en el flujo del documento.
+  position: relative;
+  //Esto indica que los elementos con la clase ".slides" dentro del elemento ".slider" tendrán estilos específicos.
+  .slides {
+    //Establece los elementos con la clase ".slides" como ocultos. Esto significa que no serán visibles en la página.
+    display: none;
+
+    // Esto indica que cuando se agrega la clase ".active" a los elementos con la clase ".slides", se aplicarán estilos adicionales.
+    &.active {
+      //Establece los elementos con la clase ".slides" y la clase ".active" como visibles, mostrándolos en la página.
+      display: block;
+    }
+    //Esto indica que los elementos <img> dentro de los elementos con la clase ".slides" tendrán estilos específicos.
+    img {
+      //Establece el ancho del elemento <img> como el 100% del ancho del contenedor padre. Esto asegura que la imagen se ajuste al ancho del contenedor.
+      width: 100%;
+      //Establece el ancho máximo del elemento <img> como 600 píxeles. Esto limita el ancho de la imagen para que no se extienda más allá de ese límite.
+      max-width: 600px;
+    }
+  }
+}
+//Se establece estilos específicos para el elemento con la clase ".footer"
+.footer {
+  //Establece la posición del elemento como "absolute". Esto significa que se posicionará en relación con el primer elemento padre que tenga una posición relativa o absoluta.
+  position: absolute;
+  //Establece la posición del elemento en la parte inferior de su contenedor padre.
+  bottom: 0;
+  //Establece el ancho del elemento como el 100% del ancho del contenedor padre. Esto asegura que ocupe todo el ancho disponible.
+  width: 100%;
+  //Establece el elemento como un contenedor flexible. Esto permite utilizar las propiedades de flexbox para controlar la disposición y el alineamiento de los elementos hijos dentro del contenedor.
+  display: flex;
+  //Establece un relleno de 30 píxeles en la parte superior e inferior y 100 píxeles en los lados izquierdo y derecho del elemento.
+  padding: 30px 100px;
+  //Distribuye los elementos hijos dentro del contenedor con espacio adicional entre ellos. Esto hace que los elementos se coloquen lo más lejos posible entre sí, empujando los elementos extremos hacia los lados opuestos.
+  justify-content: space-between;
+  //Alinea verticalmente los elementos hijos dentro del contenedor en la parte inferior. Los elementos se alinearán verticalmente en la parte inferior del contenedor.
+  align-items: flex-end;
+}
+//Se establece estilos específicos para un elemento con la clase ".sci".
+.sci {
+  //Establece el elemento como un contenedor flexible. Esto permite utilizar las propiedades de flexbox para controlar la disposición y el alineamiento de los elementos hijos dentro del contenedor.
+  display: flex;
+  //Esto indica que los elementos <li> dentro del elemento ".sci" tendrán estilos específicos.
+  li {
+    //Elimina los estilos de viñeta o numeración en los elementos <li>. Esto hace que los elementos de lista no muestren puntos o números.
+    list-style: none;
+
+    //Esto indica que los elementos <a> (enlaces) dentro de los elementos <li> tendrán estilos específicos.
+    a {
+      //Establece el color de texto de los elementos <a> como blanco (#fff).
+      color: #fff;
+      //Establece el tamaño de fuente de los elementos <a> como 2 veces el tamaño de  fuente por defecto.
+      font-size: 2em;
+      //Establece un margen derecho de 20 píxeles en los elementos <a>. Esto crea un  espacio horizontal entre los enlaces.
+      margin-right: 20px;
+      //Establece los elementos <a> como elementos en línea con un bloque de caja. Esto   permite que los enlaces se muestren en una línea horizontal.
+      display: inline-block;
+      //Agrega una transición suave de 0.25 segundos a las propiedades que cambien. Esto  crea un efecto de transición suave cuando el estado del enlace cambie.
+      transition: 0.25s;
+
+      //Esto indica que cuando se coloca el cursor sobre el elemento <a>, se aplicarán estilos adicionales.
+      &:hover {
+        //Aplica una transformación de desplazamiento vertical a los elementos <a>. En este caso, los enlaces se desplazarán hacia arriba en 5 píxeles cuando se coloque el cursor sobre ellos. Esto puede crear un efecto de elevación o resaltado visual.
+        transform: translateY(-5px);
+      }
+    }
+  }
+}
+//Se establece estilos específicos para un elemento con la clase ".prevNext".
+.prevNext {
+  //Establece la posición del elemento como "relative". Esto significa que se posicionará en relación con su ubicación normal en el flujo del documento.
+  position: relative;
+  //Evita que los elementos dentro de ".prevNext" sean seleccionables por el usuario. Esto significa que el texto no se podrá resaltar o seleccionar con el cursor.
+  user-select: none;
+  //Esto indica que los elementos <p> dentro del elemento ".prevNext" tendrán estilos específicos.
+  p {
+    //Establece la posición del elemento <p> como "relative". Esto significa que se posicionará en relación con su ubicación normal en el flujo del documento.
+    position: relative;
+    //Establece el color de texto de los elementos <p> como blanco (#fff).
+    color: #fff;
+    // Alinea el texto dentro de los elementos <p> a la derecha (fin) del contenedor.
+    text-align: end;
+    //Establece un margen inferior de 15 píxeles en los elementos <p>. Esto crea un espacio vertical entre los párrafos.
+    margin-bottom: 15px;
+
+    //Esto indica que se aplicarán estilos a un pseudo-elemento ::before dentro de los elementos <p>.
+    &::before {
+      //Define el contenido del pseudo-elemento ::before como una cadena vacía. Esto es necesario para que el pseudo-elemento se muestre.
+      content: "";
+      //Establece la posición del pseudo-elemento ::before como "absolute". Esto significa que se posicionará en relación con el elemento padre que tenga una posición relativa o absoluta.
+      position: absolute;
+      //Establece la posición vertical del pseudo-elemento ::before en el 50% del elemento padre.
+      top: 50%;
+      //Establece la posición horizontal del pseudo-elemento ::before 35 píxeles a la izquierda del elemento padre.
+      left: -35px;
+      //Aplica una transformación de desplazamiento vertical al pseudo-elemento ::before. En este caso, el pseudo-elemento se desplaza hacia arriba en un 50% de su altura para centrarlo verticalmente en el elemento padre.
+      transform: translateY(-50%);
+      //Establece el ancho del pseudo-elemento ::before como 50 píxeles.
+      width: 50px;
+      //Establece la altura del pseudo-elemento ::before como 2 píxeles.
+      height: 2px;
+      //Establece el color de fondo del pseudo-elemento ::before como blanco (#fff).
+      background: #fff;
+    }
+  }
+  //Se establece estilos específicos para los elementos <span>.
+  span {
+    // Establece la posición del elemento <span> como "relative". Esto significa que se posicionará en relación con su ubicación normal en el flujo del documento.
+    position: relative;
+    //Establece el elemento <span> como un contenedor de elementos flexibles en línea. Esto permite utilizar las propiedades de flexbox para controlar la disposición y el alineamiento de los elementos hijos dentro del <span>
+    display: inline-flex;
+    //linea horizontalmente los elementos hijos dentro del <span> en el centro.
+    justify-content: center;
+    //Alinea verticalmente los elementos hijos dentro del <span> en el centro.
+    align-items: center;
+    //Establece el ancho del <span> como 50 píxeles.
+    width: 50px;
+    //Establece la altura del <span> como 50 píxeles.
+    height: 50px;
+    //Establece un borde de 2 píxeles de grosor alrededor del <span>, con un color blanco (#fff).
+    border: 2px solid #fff;
+    //Cambia el cursor del mouse al estilo de un puntero cuando se pasa sobre el <span>. Esto indica que el elemento es interactivo.
+    cursor: pointer;
+    //Establece el tamaño de fuente del contenido del <span> como 2 veces el tamaño de fuente por defecto.
+    font-size: 2em;
+    //Establece el color de texto del contenido del <span> como blanco (#fff).
+    color: #fff;
+    //Esto indica que se aplicarán estilos adicionales al segundo <span> dentro de su contenedor padre.
+    &:nth-child(2) {
+      //Establece un margen derecho de 20 píxeles en el segundo <span>. Esto crea un espacio horizontal entre los dos <span>.
+      margin-right: 20px;
+    }
+  }
+}
+// Los siguientes estilos se aplicarán cuando el ancho de la ventana del navegador sea igual o inferior a 991 píxeles.
+@media (max-width: 991px) {
+  .main {
+    //Establece un relleno de 40 píxeles en todas las direcciones del elemento.
+    padding: 40px;
+  }
+
+  header {
+    //Establece un relleno de 20 píxeles en la parte superior e inferior y 40 píxeles en los lados del elemento.
+    padding: 20px 40px;
+  }
+
+  .logo {
+    //Establece el ancho máximo del elemento como 70 píxeles.
+    max-width: 70px;
+  }
+
+  .content {
+    //Establece la dirección de flexión de los elementos hijos del contenedor como columna, lo que cambia su disposición de horizontal a vertical.
+    flex-direction: column;
+    //Establece un margen superior de 120 píxeles, margen inferior de 40 píxeles y margen izquierdo y derecho automáticos en el elemento.
+    margin: 120px 0 40px;
+    //Estilos aplicados al elemento con la clase ".text" dentro de ".content".
+    .text {
+      // Establece el ancho máximo del elemento como el 100% del contenedor.
+      max-width: 100%;
+      //Estilos aplicados al elemento "h2" dentro de ".text".
+      h2 {
+        //Establece el tamaño de fuente del elemento "h2" como 4 veces el tamaño de fuente por defecto.
+        font-size: 4em;
+      }
+    }
+  }
+  //Estilos aplicados al elemento con la clase ".footer".
+  .footer {
+    //Establece la posición del elemento como "relative".
+    position: relative;
+    //Elimina el relleno en todas las direcciones del elemento.
+    padding: 0;
+  }
+  //Estilos aplicados al elemento con la clase ".navigation".
+  .navigation {
+    //Oculta el elemento
+    display: none;
+    //Estilos aplicados a los elementos "a" dentro de "li" dentro de ".navigation".
+    li a {
+      //Establece el tamaño de fuente de los elementos "a" como 1.5 veces el tamaño de fuente por defecto.
+      font-size: 1.5em;
+      //Establece un margen superior e inferior de 10 píxeles en los elementos "a".
+      margin: 10px 0;
+      //Establece los elementos "a" como elementos en línea con un bloque de contenido.
+      display: inline-block;
+    }
+    //Estilos aplicados cuando el elemento ".navigation" también tiene la clase ".active".
+    &.active {
+      //Establece la posición del elemento como "fixed", lo que lo mantiene fijo en la pantalla incluso al desplazarse.
+      position: fixed;
+      //Establecen la posición y dimensiones del elemento para cubrir toda la pantalla.
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      //Establece el fondo del elemento como un color específico (#d10a20).
+      background: #d10a20;
+      //Establecen la disposición de los elementos hijos del contenedor como una columna y los alinea horizontal y verticalmente en el centro.
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+  //Estilos aplicados al elemento con la clase ".toggle".
+  .toggle {
+    //Establece la posición del elemento como "relative".
+    position: relative;
+    // Establece el ancho y la altura del elemento a 32 píxeles y 40 píxeles, respectivamente.
+    width: 32px;
+    height: 40px;
+    //Establece los elementos hijos del contenedor como flexibles en línea y los alinea horizontal y verticalmente en el centro.
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //Establece el índice de apilamiento del elemento.
+    z-index: 100000;
+    //Cambia el cursor del mouse al estilo de un puntero cuando se pasa sobre el elemento.
+    cursor: pointer;
+    //Estilos aplicados al pseudo-elemento "::before" del elemento ".toggle".
+    &::before {
+      //Establece el contenido del pseudo-elemento como vacío.
+      content: "";
+      //Establece la posición del pseudo-elemento como "absolute".
+      position: absolute;
+      //Establece el ancho del pseudo-elemento como el 100% del ancho del elemento y la altura como 2 píxeles.
+      width: 100%;
+      height: 2px;
+      //Establece el color de fondo del pseudo-elemento como blanco (#fff).
+      background: #fff;
+      //Aplica una transformación de desplazamiento vertical de -10 píxeles al pseudo-elemento.
+      transform: translateY(-10px);
+      //Agrega una sombra al pseudo-elemento con un desplazamiento vertical de 10 píxeles y color blanco (#fff).
+      box-shadow: 0 10px 0 #fff;
+      //Establece una duración de transición de 0.25 segundos para las propiedades animadas del pseudo-elemento.
+      transition: 0.25s;
+    }
+    //Estilos aplicados al pseudo-elemento "::after" del elemento ".toggle".
+    &::after {
+      //Establece el contenido del pseudo-elemento como vacío.
+      content: "";
+      //Establece la posición del pseudo-elemento como "absolute".
+      position: absolute;
+      //Establece el ancho del pseudo-elemento como el 100% del ancho del elemento y la altura como 2 píxeles.
+      width: 100%;
+      height: 2px;
+      //Establece el color de fondo del pseudo-elemento como blanco (#fff).
+      background: #fff;
+      //Aplica una transformación de desplazamiento vertical de 10 píxeles al pseudo-elemento.
+      transform: translateY(10px);
+      //Establece una duración de transición de 0.25 segundos para las propiedades animadas del pseudo-elemento.
+      transition: 0.25s;
+    }
+    //Estilos aplicados cuando el elemento ".toggle" también tiene la clase ".active".
+    &.active {
+      //Establecen la posición del elemento como "fixed" y lo coloca en la esquina superior derecha de la ventana del navegador.
+      position: fixed;
+      right: 40px;
+      //Estilos aplicados al pseudo-elemento "::before" del elemento ".toggle.active".
+      &::before {
+        //Aplica una transformación de desplazamiento vertical de 0 píxeles y una rotación de 45 grados al pseudo-elemento.
+        transform: translateY(0px) rotate(45deg);
+        //Elimina la sombra del pseudo-elemento.
+        box-shadow: 0 0 0 #fff;
+      }
+      //Estilos aplicados al pseudo-elemento "::after" del elemento ".toggle.active".
+      &::after {
+        //Aplica una transformación de desplazamiento vertical de 0 píxeles y una rotación de -45 grados al pseudo-elemento.
+        transform: translateY(0px) rotate(-45deg);
+      }
+    }
+  }
+}
+//Se aplica cuando el ancho de la ventana del navegador es igual o menor a 480 píxeles.
+@media (max-width: 480px) {
+  //Se establece un relleno de 20 píxeles para los elementos con las clases "header" y "main". Esto significa que estos elementos tendrán un espacio de 20 píxeles entre su contenido y sus bordes en dispositivos con un ancho máximo de 480 píxeles.
+  header,
+  .main {
+    padding: 20px;
+  }
+  //Establece el tamaño de fuente de los elementos "h2" que se encuentran dentro de un elemento con la clase "text" y este a su vez se encuentra dentro de un elemento con la clase "content". El tamaño de fuente se establece en 3 veces el tamaño de la fuente del elemento raíz, lo cual puede variar dependiendo del contexto.
+  .content .text h2 {
+    font-size: 3em;
+  }
+  //Establece un relleno de 15 píxeles en la parte superior e inferior y un relleno de 30 píxeles en los lados izquierdo y derecho para los elementos con la clase "btn". Esto significa que los botones tendrán un espacio de 15 píxeles entre su contenido y sus bordes en la parte superior e inferior, y un espacio de 30 píxeles en los lados izquierdo y derecho.
+  .btn {
+    padding: 15px 30px;
+  }
+  //Cambia la dirección de flexión de los elementos con la clase "footer" a una columna invertida. Esto significa que los elementos hijos del contenedor "footer" se apilarán verticalmente de arriba hacia abajo en orden inverso al establecido por defecto. Además, los elementos hijos se alinearán horizontalmente en el centro del contenedor.
+  .footer {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  //Establece un margen superior de 40 píxeles para los elementos con la clase "sci". Esto significa que habrá un espacio de 40 píxeles entre la parte superior de estos elementos y el contenido o los elementos superiores.
+  .sci {
+    margin-top: 40px;
+  }
+}
